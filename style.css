@@ -1,0 +1,988 @@
+/* style.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #e6f7ff; /* light blue background */
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #add8e6; /* Light Blue on hover */
+}
+
+.cta-button {
+    background-color: #ffc107; /* Yellow CTA */
+    color: #333;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #ffdb58;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('hero-bg.jpg'); /* Blue overlay */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 0; /* Reduced padding */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* slightly reduced font-size */
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem; /* reduced margin */
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 0.8rem 1.8rem; /* reduced padding */
+    margin: 0 0.8rem; /* reduced margin */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.explore-button {
+    background-color: #007bff;
+}
+
+.apply-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.about, .why-choose-us, .academics, .co-curricular, .gallery, .news, .contact {
+    padding: 4rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #007bff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.principal-message {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.principal-message img {
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.choose-us-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 8px;
+}
+
+.choose-us-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.academic-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.academic-program img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.co-curricular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.co-curricular-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.news-item .date {
+    color: #666;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #007bff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.gallery {
+    padding: 4rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Optional: Lightbox Styles (if you implement a lightbox) */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.lightbox.active {
+    display: flex; /* Show lightbox when active */
+}
+/* style.css */
+/* ... (Previous CSS styles) ... */
+
+.fees {
+    padding: 4rem 0;
+    background-color: #f0f8ff;
+}
+
+.fees-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.fees-details h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.student-portal {
+    padding: 4rem 0;
+}
+
+.portal-login form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.portal-login label {
+    margin-top: 1rem;
+}
+
+.portal-login input, .portal-login button {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.portal-login button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#studentDetails {
+    margin-top: 2rem;
+}
+
+#studentDetails h4 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+#assignmentList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#logoutButton {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* ... (Responsive styles) ... */
+/* style.css (Modified Section) */
+
+.why-choose-us {
+    padding: 4rem 0;
+    background-color: #f8f8f8; /* Light gray background */
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e; /* Darker gray heading */
+}
+
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* slightly wider cards */
+    gap: 2.5rem; /* increased gap for spacing */
+}
+
+.choose-us-item {
+    text-align: center;
+    padding: 3rem 2rem; /* increased padding */
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.choose-us-item:hover {
+    transform: translateY(-5px); /* slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.choose-us-item i {
+    font-size: 2.5rem; /* larger icons */
+    margin-bottom: 1.5rem;
+}
+
+.choose-us-item h3 {
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 1rem;
+}
+
+.choose-us-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Color Variations */
+.choose-us-item:nth-child(1) i {
+    color: #3498db; /* Blue */
+}
+
+.choose-us-item:nth-child(2) i {
+    color: #2ecc71; /* Green */
+}
+
+.choose-us-item:nth-child(3) i {
+    color: #e67e22; /* Orange */
+}
+
+.choose-us-item:nth-child(4) i {
+    color: #9b59b6; /* Purple */
+}
+
+.choose-us-item:nth-child(5) i {
+    color: #e74c3c; /* Red */
+}
+/* style.css (Modified Section) */
+
+.why-choose-us {
+    padding: 4rem 0;
+    background-color: #e6f7ff; /* Light blue background (signature color) */
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e; /* Darker gray heading */
+}
+
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* slightly wider cards */
+    gap: 2.5rem; /* increased gap for spacing */
+}
+
+.choose-us-item {
+    text-align: center;
+    padding: 3rem 2rem; /* increased padding */
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.choose-us-item:hover {
+    transform: translateY(-5px); /* slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.choose-us-item i {
+    font-size: 2.5rem; /* larger icons */
+    margin-bottom: 1.5rem;
+}
+
+.choose-us-item h3 {
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 1rem;
+}
+
+.choose-us-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Color Variations */
+.choose-us-item:nth-child(1) i {
+    color: #3498db; /* Blue */
+}
+
+.choose-us-item:nth-child(2) i {
+    color: #2ecc71; /* Green */
+}
+
+.choose-us-item:nth-child(3) i {
+    color: #e67e22; /* Orange */
+}
+
+.choose-us-item:nth-child(4) i {
+    color: #9b59b6; /* Purple */
+}
+
+.choose-us-item:nth-child(5) i {
+    color: #e74c3c; /* Red */
+}
+/* style.css (Modified Sections) */
+
+.why-choose-us, .news, .contact {
+    padding: 4rem 0;
+    background-color: #e6f7ff; /* Light blue background (signature color) */
+}
+
+.why-choose-us .container, .news .container, .contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.why-choose-us h2, .news h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e; /* Darker gray heading */
+}
+
+/* Why Choose Us Section */
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* slightly wider cards */
+    gap: 2.5rem; /* increased gap for spacing */
+}
+
+.choose-us-item {
+    text-align: center;
+    padding: 3rem 2rem; /* increased padding */
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.choose-us-item:hover {
+    transform: translateY(-5px); /* slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.choose-us-item i {
+    font-size: 2.5rem; /* larger icons */
+    margin-bottom: 1.5rem;
+}
+
+.choose-us-item h3 {
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 1rem;
+}
+
+.choose-us-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Color Variations */
+.choose-us-item:nth-child(1) i {
+    color: #3498db; /* Blue */
+}
+
+.choose-us-item:nth-child(2) i {
+    color: #2ecc71; /* Green */
+}
+
+.choose-us-item:nth-child(3) i {
+    color: #e67e22; /* Orange */
+}
+
+.choose-us-item:nth-child(4) i {
+    color: #9b59b6; /* Purple */
+}
+
+.choose-us-item:nth-child(5) i {
+    color: #e74c3c; /* Red */
+}
+
+/* News Section */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background-color: #fff; /* White news item background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.news-item .date {
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+/* style.css (Modified Sections) */
+
+/* ... (Previous CSS styles) ... */
+
+/* News Section */
+.news, .fees {
+    padding: 4rem 0;
+    background-color: #e6f7ff; /* Light blue background (signature color) */
+}
+
+.news .container, .fees .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.news h2, .fees h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e; /* Darker gray heading */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-item {
+    background-color: #fff; /* White news item background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.news-item h3 {
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 0.5rem;
+}
+
+.news-item p, .news-item .date {
+    color: #555; /* Normal text color */
+}
+
+.news-item .date {
+    margin-top: 1rem;
+}
+
+/* Fees Section */
+.fees-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.fees-details h3 {
+    color: #2c3e50; /* Darker text for headings */
+    margin-bottom: 1rem;
+}
+
+.fees-details p {
+    color: #555; /* Normal text color */
+}
+/* ... (Previous CSS styles) ... */
+
+.hero {
+    background-image: linear-gradient(rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), url('students-playing.jpg'); /* Replace with your student image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 10rem 0; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.teacher-section {
+    max-width: 400px; /* Adjust as needed */
+    text-align: right;
+}
+
+.teacher-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .teacher-section{
+        text-align: center;
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+/* ... (Previous CSS styles) ... */
+
+.hero {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background for overall section */
+    color: #333; /* Darker text color */
+    text-align: center;
+    padding: 5rem 2rem; /* Adjusted padding */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-bottom: 3rem; /* Spacing between text and images */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 2rem; /* Spacing between images */
+    width: 100%; /* Ensure images take full width */
+    max-width: 1000px; /* Limit image container width */
+}
+
+.students-image, .teacher-image {
+    width: 45%; /* Adjust image width as needed */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        gap: 1rem;
+    }
+    .students-image, .teacher-image {
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+/* ... (Previous CSS styles) ... */
+
+.co-curricular {
+    padding: 4rem 0;
+    background-color: #e6f7ff; /* Light blue background */
+}
+
+.co-curricular .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.co-curricular h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e;
+}
+
+.co-curricular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+    gap: 2rem;
+}
+
+.co-curricular-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sport-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.co-curricular-item h3 {
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .co-curricular-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .sport-image {
+        height: 150px;
+    }
+}
+/* style.css */
+
+/* ... (Previous CSS styles) ... */
+
+.co-curricular {
+    padding: 4rem 0;
+    background-color: #e6f7ff; /* Light blue background */
+}
+
+.co-curricular .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.co-curricular h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #34495e;
+}
+
+.co-curricular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+    gap: 2rem;
+}
+
+.co-curricular-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sport-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.co-curricular-item h3 {
+    color: #2c3e50;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .co-curricular-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .sport-image {
+        height: 150px;
+    }
+}
+/* ... (Previous CSS styles) ... */
+
+.school-motto {
+    font-style: italic;
+    color: #007bff; /* Or any color you prefer */
+    margin-top: 1.5rem; /* Adjust spacing as needed */
+    text-align: center; /* Center the motto */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+/* ... (Rest of your CSS) ... */
+/* ... (Previous CSS styles) ... */
+
+.principal-message img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 1rem; /* Spacing between photo and text */
+}
+
+/* ... (Rest of your CSS) ... */
+/* ... (Previous CSS styles) ... */
+
+.school-motto {
+    font-style: italic;
+    color: #007bff; /* Or any color you prefer */
+    margin-top: 1.5rem; /* Adjust spacing as needed */
+    text-align: center; /* Center the motto */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+/* ... (Rest of your CSS) ... */
+.principal-message img {
+    width: 150px !important;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 1rem;
+}/* ... (Previous CSS styles) ... */
+
+.principal-message img {
+    width: 150px; /* Set a fixed width */
+    max-width: 150px; /* Ensure it doesn't exceed 150px */
+    height: auto;
+    border-radius: 50%;
+    margin-right: 1rem;
+    display: block; /* Ensure it behaves as a block element */
+}
+
+.principal-message {
+    width: 150px; /* Reduce the width even more */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
